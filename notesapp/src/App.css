@@ -1,42 +1,102 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Overall app background */
+.app-container {
+  background-color: #1e1e2f; /* keep same dark background */
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff20; /* lighter transparent header */
+  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ffffff30;
+}
+
+.app-header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f5f5f5;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffd700;
+}
+
+/* Body */
+.app-body {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 3rem 4rem;
   text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.welcome-card:hover {
+  transform: translateY(-10px);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.welcome-card h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffd700;
+  text-shadow: 0 0 10px #d7c97c;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.welcome-card p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #ffffffcc;
 }
 
-.card {
-  padding: 2em;
+.cta-btn {
+  background-color: #d7c876;
+  color: #1e1e2f;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.cta-btn:hover {
+  background-color: #ffc107;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.6);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ffffff10;
+  border-top: 1px solid #ffffff30;
+  font-size: 0.9rem;
+  color: #ffffffaa;
 }
